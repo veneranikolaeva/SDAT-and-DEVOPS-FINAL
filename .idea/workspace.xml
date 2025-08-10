@@ -4,15 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a98fdb34-937d-4509-aa6b-3ca286ecd3ca" name="Changes" comment="" />
+    <list default="true" id="a98fdb34-937d-4509-aa6b-3ca286ecd3ca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Aircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Aircraft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Airport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Passenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PassengerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PassengerRepository.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;veneranikolaeva&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/veneranikolaeva/SDAT-and-DEVOPS-FINAL.git&quot;,
+    &quot;accountId&quot;: &quot;4cd45306-8bdb-421c-a28e-c096530df1bb&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="313x3idH9hELWROZPNWl3F4wcJB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -20,23 +51,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AviationApplication.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "onboarding.tips.debug.path": "C:/Users/Venera Nikloaeva/Desktop/Keyin College/SDAT_DEVOPS/aviation/untitled/src/main/java/org/example/Main.java"
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "development/backend",
+    "ignore.virus.scanning.warn.message": "true",
+    "onboarding.tips.debug.path": "C:/Users/Venera Nikloaeva/Desktop/Keyin College/SDAT_DEVOPS/aviation/untitled/src/main/java/org/example/Main.java",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a98fdb34-937d-4509-aa6b-3ca286ecd3ca" name="Changes" comment="" />
@@ -54,6 +79,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/CityController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

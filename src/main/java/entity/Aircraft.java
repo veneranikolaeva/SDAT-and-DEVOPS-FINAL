@@ -22,6 +22,9 @@ public class Aircraft {
 
     private int numberOfPassengers;
 
+    @OneToMany(mappedBy = "aircraft")
+    private Set<Flight> flights;
+
     @ManyToMany
     @JoinTable(
             name = "aircraft_airport",

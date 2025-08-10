@@ -24,6 +24,12 @@ public class Airport {
     @JoinColumn(name = "city_id", nullable = false)
     private City city;
 
+    @OneToMany(mappedBy = "landingAirport")
+    private Set<Flight> arrivals;
+
+    @OneToMany(mappedBy = "departureAirport")
+    private Set<Flight> departures;
+
     @ManyToMany(mappedBy = "airports")
     private Set<Aircraft> aircrafts;
 }

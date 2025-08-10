@@ -54,4 +54,11 @@ public class CityController {
                 })
                 .orElse(ResponseEntity.notFound().build());
     }
+    @GetMapping("/{id}/airports")
+    public ResponseEntity<List<entity.Airport>> getAirportsByCity(@PathVariable Long id) {
+        // Add your AirportRepository findByCityId() method
+        // Example: return airportRepository.findByCityId(id);
+        // For now, just return 501 Not Implemented
+        return ResponseEntity.status(501).build();
+    }
 }
