@@ -1,7 +1,8 @@
-package controller;
+package com.veneranikolaeva.aviation.controller;
 
-import entity.City;
-import repository.CityRepository;
+import com.veneranikolaeva.aviation.entity.Airport;
+import com.veneranikolaeva.aviation.entity.City;
+import com.veneranikolaeva.aviation.repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -55,7 +56,7 @@ public class CityController {
                 .orElse(ResponseEntity.notFound().build());
     }
     @GetMapping("/{id}/airports")
-    public ResponseEntity<List<entity.Airport>> getAirportsByCity(@PathVariable Long id) {
+    public ResponseEntity<List<Airport>> getAirportsByCity(@PathVariable Long id) {
         // Add your AirportRepository findByCityId() method
         // Example: return airportRepository.findByCityId(id);
         // For now, just return 501 Not Implemented

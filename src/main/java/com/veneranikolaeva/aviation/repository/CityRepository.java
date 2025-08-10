@@ -1,6 +1,6 @@
-package repository;
+package com.veneranikolaeva.aviation.repository;
 
-import entity.City;
+import com.veneranikolaeva.aviation.entity.City;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

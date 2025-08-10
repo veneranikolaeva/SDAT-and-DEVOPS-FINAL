@@ -1,7 +1,7 @@
-package controller;
+package com.veneranikolaeva.aviation.controller;
 
-import entity.Aircraft;
-import repository.AircraftRepository;
+import com.veneranikolaeva.aviation.entity.Aircraft;
+import com.veneranikolaeva.aviation.repository.AircraftRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

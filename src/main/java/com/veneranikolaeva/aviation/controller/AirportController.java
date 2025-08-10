@@ -1,8 +1,9 @@
-package controller;
+package com.veneranikolaeva.aviation.controller;
 
-import entity.Airport;
-import repository.AirportRepository;
-import repository.FlightRepository;
+import com.veneranikolaeva.aviation.entity.Flight;
+import com.veneranikolaeva.aviation.entity.Airport;
+import com.veneranikolaeva.aviation.repository.AirportRepository;
+import com.veneranikolaeva.aviation.repository.FlightRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -61,17 +62,17 @@ public class AirportController {
                 .orElse(ResponseEntity.notFound().build());
     }
     @GetMapping("/{id}/departures")
-    public ResponseEntity<List<entity.Flight>> getDepartures(@PathVariable Long id) {
+    public ResponseEntity<List<Flight>> getDepartures(@PathVariable Long id) {
         // Implement this method based on your FlightRepository
-        List<entity.Flight> flights = flightRepository.findByDepartureAirportId(id);
+        List<Flight> flights = flightRepository.findByDepartureAirportId(id);
         return ResponseEntity.ok(flights);
     }
 
     // Relationship: Get all flights landing at this airport
     @GetMapping("/{id}/arrivals")
-    public ResponseEntity<List<entity.Flight>> getArrivals(@PathVariable Long id) {
+    public ResponseEntity<List<Flight>> getArrivals(@PathVariable Long id) {
         // Implement this method based on your FlightRepository
-        List<entity.Flight> flights = flightRepository.findByLandingAirportId(id);
+        List<Flight> flights = flightRepository.findByLandingAirportId(id);
         return ResponseEntity.ok(flights);
     }
 }

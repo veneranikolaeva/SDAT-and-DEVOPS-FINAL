@@ -1,13 +1,14 @@
-package controller;
+package com.veneranikolaeva.aviation.controller;
 
-import entity.Flight;
-import repository.FlightRepository;
+import com.veneranikolaeva.aviation.entity.Flight;
+import com.veneranikolaeva.aviation.entity.Passenger;
+import com.veneranikolaeva.aviation.repository.FlightRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
-import java.time.LocalDateTime;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -71,7 +72,7 @@ public class FlightController {
 
     // Get all passengers booked on this flight
     @GetMapping("/{id}/passengers")
-    public ResponseEntity<List<entity.Passenger>> getPassengersOnFlight(@PathVariable Long id) {
+    public ResponseEntity<List<Passenger>> getPassengersOnFlight(@PathVariable Long id) {
         Optional<Flight> flightOpt = flightRepository.findById(id);
         if (!flightOpt.isPresent()) {
             return ResponseEntity.notFound().build();

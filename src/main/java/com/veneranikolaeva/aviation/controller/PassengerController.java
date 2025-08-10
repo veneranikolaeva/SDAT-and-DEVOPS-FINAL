@@ -1,7 +1,8 @@
-package controller;
+package com.veneranikolaeva.aviation.controller;
 
-import entity.Passenger;
-import repository.PassengerRepository;
+import com.veneranikolaeva.aviation.entity.Flight;
+import com.veneranikolaeva.aviation.entity.Passenger;
+import com.veneranikolaeva.aviation.repository.PassengerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -66,9 +67,9 @@ public class PassengerController {
 
     // Get all flights of a passenger
     @GetMapping("/{id}/flights")
-    public ResponseEntity<List<entity.Flight>> getFlightsForPassenger(@PathVariable Long id) {
+    public ResponseEntity<List<Flight>> getFlightsForPassenger(@PathVariable Long id) {
         return passengerRepository.findById(id).map(passenger -> {
-            List<entity.Flight> flights = new ArrayList<entity.Flight>(passenger.getFlights());
+            List<Flight> flights = new ArrayList<Flight>(passenger.getFlights());
             return ResponseEntity.ok(flights);
         }).orElse(ResponseEntity.notFound().build());
     }
