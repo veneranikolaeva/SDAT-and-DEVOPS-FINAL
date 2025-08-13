@@ -1,7 +1,7 @@
 package com.veneranikolaeva.aviation.entity;
 
 import jakarta.persistence.*;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Set;
 
 @Entity
@@ -11,7 +11,7 @@ public class Aircraft {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String type;
 
@@ -20,6 +20,7 @@ public class Aircraft {
     private int numberOfPassengers;
 
     @OneToMany(mappedBy = "aircraft")
+    @JsonIgnore
     private Set<Flight> flights;
 
     @ManyToMany
@@ -28,18 +29,20 @@ public class Aircraft {
             joinColumns = @JoinColumn(name = "aircraft_id"),
             inverseJoinColumns = @JoinColumn(name = "airport_id")
     )
+    @JsonIgnore
     private Set<Airport> airports;
 
     @ManyToMany(mappedBy = "flights")
+    @JsonIgnore
     private Set<Passenger> passengers;
 
     //Getters and setters
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

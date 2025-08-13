@@ -1,6 +1,5 @@
 package com.veneranikolaeva.aviation.controller;
 
-import com.veneranikolaeva.aviation.entity.Flight;
 import com.veneranikolaeva.aviation.entity.Airport;
 import com.veneranikolaeva.aviation.repository.AirportRepository;
 import com.veneranikolaeva.aviation.repository.FlightRepository;
@@ -21,39 +20,51 @@ public class AirportController {
     @Autowired
     private FlightRepository flightRepository;
 
+    // Get all airports
     @GetMapping
     public List<Airport> getAllAirports() {
         return airportRepository.findAll();
     }
 
+    // Get airport by ID
     @GetMapping("/{id}")
-    public ResponseEntity<Airport> getAirportById(@PathVariable Long id) {
+    public ResponseEntity<Airport> getAirportById(@PathVariable Integer id) {
         return airportRepository.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+    // Get airports by city
+    @GetMapping("/city/{cityId}")
+    public ResponseEntity<List<Airport>> getAirportsByCity(@PathVariable Integer cityId) {
+        List<Airport> airports = airportRepository.findByCityId(cityId);
+        return ResponseEntity.ok(airports);
+    }
 
-        @PostMapping
+
+    // Create new airport
+    @PostMapping
     public ResponseEntity<Airport> createAirport(@Valid @RequestBody Airport airport) {
         Airport saved = airportRepository.save(airport);
         return ResponseEntity.ok(saved);
     }
 
+    // Update airport
     @PutMapping("/{id}")
-    public ResponseEntity<Airport> updateAirport(@PathVariable Long id, @RequestBody Airport airportDetails) {
+    public ResponseEntity<Airport> updateAirport(@PathVariable Integer id, @Valid @RequestBody Airport airportDetails) {
         return airportRepository.findById(id)
                 .map(airport -> {
                     airport.setName(airportDetails.getName());
                     airport.setCode(airportDetails.getCode());
                     airport.setCity(airportDetails.getCity());
-                    Airport updatedAirport = airportRepository.save(airport);
-                    return ResponseEntity.ok(updatedAirport);
+                    airportRepository.save(airport);
+                    return ResponseEntity.ok(airport);
                 })
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    // Delete airport
     @DeleteMapping("/{id}")
-    public ResponseEntity<Object> deleteAirport(@PathVariable Long id) {
+    public ResponseEntity<Object> deleteAirport(@PathVariable Integer id) {
         return airportRepository.findById(id)
                 .map(airport -> {
                     airportRepository.delete(airport);
@@ -61,18 +72,18 @@ public class AirportController {
                 })
                 .orElse(ResponseEntity.notFound().build());
     }
+
+    // Get flights departing from this airport
     @GetMapping("/{id}/departures")
-    public ResponseEntity<List<Flight>> getDepartures(@PathVariable Long id) {
-        // Implement this method based on your FlightRepository
-        List<Flight> flights = flightRepository.findByDepartureAirportId(id);
+    public ResponseEntity<List<com.veneranikolaeva.aviation.entity.Flight>> getDepartures(@PathVariable Integer id) {
+        List<com.veneranikolaeva.aviation.entity.Flight> flights = flightRepository.findByDepartureAirportId(id);
         return ResponseEntity.ok(flights);
     }
 
-    // Relationship: Get all flights landing at this airport
+    // Get flights arriving at this airport
     @GetMapping("/{id}/arrivals")
-    public ResponseEntity<List<Flight>> getArrivals(@PathVariable Long id) {
-        // Implement this method based on your FlightRepository
-        List<Flight> flights = flightRepository.findByLandingAirportId(id);
+    public ResponseEntity<List<com.veneranikolaeva.aviation.entity.Flight>> getArrivals(@PathVariable Integer id) {
+        List<com.veneranikolaeva.aviation.entity.Flight> flights = flightRepository.findByLandingAirportId(id);
         return ResponseEntity.ok(flights);
     }
 }

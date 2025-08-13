@@ -2,6 +2,7 @@ package com.veneranikolaeva.aviation.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Set;
 
 @Entity
@@ -10,7 +11,7 @@ public class Flight {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String flightNumber;
 
@@ -31,14 +32,15 @@ public class Flight {
     private Aircraft aircraft;
 
     @ManyToMany(mappedBy = "flights")
+    @JsonIgnore
     private Set<Passenger> passengers;
 
     // Getters and setters
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

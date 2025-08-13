@@ -26,7 +26,7 @@ public class PassengerController {
 
     // Get passenger by ID
     @GetMapping("/{id}")
-    public ResponseEntity<Passenger> getPassengerById(@PathVariable Long id) {
+    public ResponseEntity<Passenger> getPassengerById(@PathVariable Integer id) {
         return passengerRepository.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
@@ -41,7 +41,7 @@ public class PassengerController {
 
     // Update existing passenger
     @PutMapping("/{id}")
-    public ResponseEntity<Passenger> updatePassenger(@PathVariable Long id, @Valid @RequestBody Passenger passengerDetails) {
+    public ResponseEntity<Passenger> updatePassenger(@PathVariable Integer id, @Valid @RequestBody Passenger passengerDetails) {
         return passengerRepository.findById(id)
                 .map(passenger -> {
                     passenger.setFirstName(passengerDetails.getFirstName());
@@ -56,7 +56,7 @@ public class PassengerController {
 
     // Delete passenger
     @DeleteMapping("/{id}")
-    public ResponseEntity<Object> deletePassenger(@PathVariable Long id) {
+    public ResponseEntity<Object> deletePassenger(@PathVariable Integer id) {
         return passengerRepository.findById(id)
                 .map(passenger -> {
                     passengerRepository.delete(passenger);
@@ -67,7 +67,7 @@ public class PassengerController {
 
     // Get all flights of a passenger
     @GetMapping("/{id}/flights")
-    public ResponseEntity<List<Flight>> getFlightsForPassenger(@PathVariable Long id) {
+    public ResponseEntity<List<Flight>> getFlightsForPassenger(@PathVariable Integer id) {
         return passengerRepository.findById(id).map(passenger -> {
             List<Flight> flights = new ArrayList<Flight>(passenger.getFlights());
             return ResponseEntity.ok(flights);

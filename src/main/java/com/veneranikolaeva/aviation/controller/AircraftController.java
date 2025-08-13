@@ -1,13 +1,18 @@
 package com.veneranikolaeva.aviation.controller;
 
 import com.veneranikolaeva.aviation.entity.Aircraft;
+import com.veneranikolaeva.aviation.entity.Airport;
 import com.veneranikolaeva.aviation.repository.AircraftRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
+
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/api/aircrafts")
@@ -22,7 +27,7 @@ public class AircraftController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Aircraft> getAircraftById(@PathVariable Long id) {
+    public ResponseEntity<Aircraft> getAircraftById(@PathVariable Integer id) {
         return aircraftRepository.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
@@ -34,7 +39,7 @@ public class AircraftController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Aircraft> updateAircraft(@PathVariable Long id, @Valid @RequestBody Aircraft aircraftDetails) {
+    public ResponseEntity<Aircraft> updateAircraft(@PathVariable Integer id, @Valid @RequestBody Aircraft aircraftDetails) {
         return aircraftRepository.findById(id)
                 .map(aircraft -> {
                     aircraft.setType(aircraftDetails.getType());
@@ -45,9 +50,24 @@ public class AircraftController {
                 })
                 .orElse(ResponseEntity.notFound().build());
     }
+    @GetMapping("/{id}/airports")
+    public ResponseEntity<List<Airport>> getAirportsForAircraft(@PathVariable Integer id) {
+        // Verify the aircraft exists
+        Optional<Aircraft> aircraftOpt = aircraftRepository.findById(id);
+        if (!aircraftOpt.isPresent()) {
+            return ResponseEntity.notFound().build();
+        }
 
+        // Get the aircraft entity
+        Aircraft aircraft = aircraftOpt.get();
+
+        // Fetch associated airports
+        Set<Airport> airports = aircraft.getAirports();
+
+        return ResponseEntity.ok(new ArrayList<>(airports));
+    }
     @DeleteMapping("/{id}")
-    public ResponseEntity<Object> deleteAircraft(@PathVariable Long id) {
+    public ResponseEntity<Object> deleteAircraft(@PathVariable Integer id) {
         return aircraftRepository.findById(id)
                 .map(aircraft -> {
                     aircraftRepository.delete(aircraft);

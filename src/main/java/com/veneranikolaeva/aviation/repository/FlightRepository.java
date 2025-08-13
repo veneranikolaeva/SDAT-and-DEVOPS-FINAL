@@ -7,11 +7,11 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface FlightRepository extends JpaRepository<Flight, Long> {
+public interface FlightRepository extends JpaRepository<Flight, Integer> {
 
     // Find flights by departure airport ID
-    List<Flight> findByDepartureAirportId(Long airportId);
+    List<Flight> findByDepartureAirportId(Integer airportId);
 
     // Find flights by landing airport ID
-    List<Flight> findByLandingAirportId(Long airportId);
+    List<Flight> findByLandingAirportId(Integer airportId);
 }

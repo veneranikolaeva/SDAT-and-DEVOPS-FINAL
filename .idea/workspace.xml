@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a98fdb34-937d-4509-aa6b-3ca286ecd3ca" name="Changes" comment="Updates to files">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/entity/Aircraft.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/entity/Airport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/entity/City.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/entity/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/entity/Passenger.java" afterDir="false" />
+    <list default="true" id="a98fdb34-937d-4509-aa6b-3ca286ecd3ca" name="Changes" comment="Latest changes to controllers and entities">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AircraftController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/AircraftController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AirportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/AirportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/CityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/PassengerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Aircraft.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Airport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/City.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Flight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Passenger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AircraftRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/repository/AircraftRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AirportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/repository/AirportRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/repository/CityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/FlightRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/repository/FlightRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PassengerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/repository/PassengerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/AircraftController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/AircraftController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/AirportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/AirportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/CityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/FlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/PassengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/PassengerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/entity/Aircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/entity/Aircraft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/entity/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/entity/Airport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/entity/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/entity/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/entity/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/entity/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/entity/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/entity/Passenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/repository/AircraftRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/repository/AircraftRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/repository/AirportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/repository/AirportRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/repository/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/repository/CityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/repository/FlightRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/repository/FlightRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/repository/PassengerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/repository/PassengerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -54,6 +56,13 @@
     &quot;accountId&quot;: &quot;4cd45306-8bdb-421c-a28e-c096530df1bb&quot;
   }
 }</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="workOffline" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
     <option name="showPreview" value="true" />
@@ -69,6 +78,9 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.AviationApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.aviation [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.aviation [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.aviation [org.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile].executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -76,7 +88,10 @@
     &quot;git-widget-placeholder&quot;: &quot;development/backend&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Venera Nikloaeva/Desktop/Keyin College/SDAT_DEVOPS/aviation/untitled/src/main/java/org/example/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
   }
 }</component>
   <component name="TaskManager">
@@ -103,12 +118,21 @@
       <option name="project" value="LOCAL" />
       <updated>1754798549498</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Latest changes to controllers and entities">
+      <option name="closed" value="true" />
+      <created>1754840273140</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1754840273140</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updates to files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates to files" />
+    <MESSAGE value="Latest changes to controllers and entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Latest changes to controllers and entities" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -120,7 +144,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/veneranikolaeva/aviation/controller/CityController.java</url>
-          <line>26</line>
+          <line>30</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

@@ -2,6 +2,7 @@ package com.veneranikolaeva.aviation.controller;
 
 import com.veneranikolaeva.aviation.entity.Airport;
 import com.veneranikolaeva.aviation.entity.City;
+import com.veneranikolaeva.aviation.repository.AirportRepository;
 import com.veneranikolaeva.aviation.repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,13 +17,16 @@ public class CityController {
     @Autowired
     private CityRepository cityRepository;
 
+    @Autowired
+    private AirportRepository airportRepository;
+
     @GetMapping
     public List<City> getAllCities() {
         return cityRepository.findAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<City> getCityById(@PathVariable Long id) {
+    public ResponseEntity<City> getCityById(@PathVariable Integer id) {
         return cityRepository.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
@@ -34,7 +38,7 @@ public class CityController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<City> updateCity(@PathVariable Long id, @RequestBody City cityDetails) {
+    public ResponseEntity<City> updateCity(@PathVariable Integer id, @RequestBody City cityDetails) {
         return cityRepository.findById(id)
                 .map(city -> {
                     city.setName(cityDetails.getName());
@@ -47,7 +51,7 @@ public class CityController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Object> deleteCity(@PathVariable Long id) {
+    public ResponseEntity<Object> deleteCity(@PathVariable Integer id) {
         return cityRepository.findById(id)
                 .map(city -> {
                     cityRepository.delete(city);
@@ -56,10 +60,8 @@ public class CityController {
                 .orElse(ResponseEntity.notFound().build());
     }
     @GetMapping("/{id}/airports")
-    public ResponseEntity<List<Airport>> getAirportsByCity(@PathVariable Long id) {
-        // Add your AirportRepository findByCityId() method
-        // Example: return airportRepository.findByCityId(id);
-        // For now, just return 501 Not Implemented
-        return ResponseEntity.status(501).build();
+    public ResponseEntity<List<Airport>> getAirportsByCity(@PathVariable Integer id) {
+        List<Airport> airports = airportRepository.findByCityId(id);
+        return ResponseEntity.ok(airports);
     }
 }

@@ -28,7 +28,7 @@ public class FlightController {
 
     // Get flight by ID
     @GetMapping("/{id}")
-    public ResponseEntity<Flight> getFlightById(@PathVariable Long id) {
+    public ResponseEntity<Flight> getFlightById(@PathVariable Integer id) {
         return flightRepository.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
@@ -43,7 +43,7 @@ public class FlightController {
 
     // Update a flight
     @PutMapping("/{id}")
-    public ResponseEntity<Flight> updateFlight(@PathVariable Long id, @Valid @RequestBody Flight flightDetails) {
+    public ResponseEntity<Flight> updateFlight(@PathVariable Integer id, @Valid @RequestBody Flight flightDetails) {
         return flightRepository.findById(id)
                 .map(flight -> {
                     flight.setFlightNumber(flightDetails.getFlightNumber());
@@ -61,7 +61,7 @@ public class FlightController {
 
     // Delete a flight
     @DeleteMapping("/{id}")
-    public ResponseEntity<Object> deleteFlight(@PathVariable Long id) {
+    public ResponseEntity<Object> deleteFlight(@PathVariable Integer id) {
         return flightRepository.findById(id)
                 .map(flight -> {
                     flightRepository.delete(flight);
@@ -70,26 +70,26 @@ public class FlightController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // Get all passengers booked on this flight
+    // Get all passengers booked on a flight
     @GetMapping("/{id}/passengers")
-    public ResponseEntity<List<Passenger>> getPassengersOnFlight(@PathVariable Long id) {
+    public ResponseEntity<List<Passenger>> getPassengersOnFlight(@PathVariable Integer id) {
         Optional<Flight> flightOpt = flightRepository.findById(id);
         if (!flightOpt.isPresent()) {
             return ResponseEntity.notFound().build();
         }
-        // Assuming your Flight entity has `Set<Passenger> passengers;`
+
         return ResponseEntity.ok(new ArrayList<>(flightOpt.get().getPassengers()));
     }
 
-    // Optional: get flights by departure airport
+    // Get flights by departure airport
     @GetMapping("/departure/{airportId}")
-    public List<Flight> getFlightsByDeparture(@PathVariable Long airportId) {
+    public List<Flight> getFlightsByDeparture(@PathVariable Integer airportId) {
         return flightRepository.findByDepartureAirportId(airportId);
     }
 
-    // Optional: get flights by landing airport
+    // Get flights by landing airport
     @GetMapping("/landing/{airportId}")
-    public List<Flight> getFlightsByLanding(@PathVariable Long airportId) {
+    public List<Flight> getFlightsByLanding(@PathVariable Integer airportId) {
         return flightRepository.findByLandingAirportId(airportId);
     }
 }
