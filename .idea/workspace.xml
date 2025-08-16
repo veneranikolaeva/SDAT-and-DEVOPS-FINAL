@@ -8,8 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a98fdb34-937d-4509-aa6b-3ca286ecd3ca" name="Changes" comment="Latest changes">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/veneranikolaeva/aviation/AviationApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/veneranikolaeva/aviation/AviationApplicationTests.java" afterDir="false" />
     </list>
@@ -75,10 +75,10 @@
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Venera Nikloaeva/Desktop/Keyin College/SDAT_DEVOPS/aviation/Aviation",
     "onboarding.tips.debug.path": "C:/Users/Venera Nikloaeva/Desktop/Keyin College/SDAT_DEVOPS/aviation/untitled/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.language"
   }
 }]]></component>
   <component name="TaskManager">
@@ -121,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755183771390</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Latest changes">
+      <option name="closed" value="true" />
+      <created>1755306926211</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1755306926211</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
